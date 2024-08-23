@@ -8,15 +8,15 @@ Given two strings str1 and str2, return the largest string x such that x divides
 */
 
 var gcdOfStrings = function(str1, str2) {
-    if (str1 + str2 !== str2 + str1) return '';
+  if (str1 + str2 !== str2 + str1) return '';
 
-    let a = str1.length;
-    let b = str2.length;
+  let a = str1.length;
+  let b = str2.length;
 
-    while (b) {
-        let saved_b = b;
-        b = a % b;
-        a = saved_b;
-    }
-    return str1.substring(0, a);
+  while (b) {
+    let saved_b = b;
+    b = a % b;
+    a = saved_b;
+  }
+  return str1.substring(0, a);
 };
