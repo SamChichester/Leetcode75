@@ -17,7 +17,7 @@ var productExceptSelf = function(nums) {
     answers[i] = answers[i - 1] * nums[i - 1];
   }
 
-  let multiple = 1
+  let multiple = 1;
   for (let i = n - 1; i > -1; i--) {
     answers[i] *= multiple;
     multiple *= nums[i];
